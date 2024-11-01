@@ -2,9 +2,21 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <!--
-        -->
         <members>webContainer</members>
+        -->
         <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Art__c</members>
+        <members>Additional_Cost__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <!--
+        <members>Art__c.*</members>
+        <members>Additional_Cost__c.*</members>
+        -->
+        <name>CustomField</name>
     </types>
     <types>
         <!--
