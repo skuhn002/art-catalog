@@ -2,9 +2,14 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <!--
-            <members>*</members>
         -->
+        <members>webContainer</members>
         <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <!--
+        -->
+        <name>LightningMessageChannel</name>
     </types>
     <version>62.0</version>
 </Package>
