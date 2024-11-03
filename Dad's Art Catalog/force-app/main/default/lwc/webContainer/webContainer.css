@@ -14,15 +14,20 @@
 
 .art-thumbnail {
     height: 20vh;
-    border: white 1px solid;
+    border: gray 2px solid;
     margin: 0px 10px;
 }
 
 .art-flex-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.art-item {
+.art-item-title {
     text-align: center;
+}
+
+.art-item {
+    text-align: left;
 }

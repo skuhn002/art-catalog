@@ -17,9 +17,18 @@
             <template for:each={artRecords} for:item="art">
                 <div key={art.Id} class="card-container">
                     <lightning-card class="card">
-                        <p class="art-item">{art.Title__c}</p>
-                        <img class="art-thumbnail" src={art.Imugr_Link__c} alt="Art Image">
-                        <p class="art-item">By: {art.Artist__c}</p>
+                        <div style="padding: 0px 10px;">
+                            <p class="art-item-title">{art.Title__c}</p>
+                            <div style="text-align: center;">
+                                <img class="art-thumbnail" src={art.Imugr_Link__c} alt="Art Image">
+                            </div>
+                            <p class="art-item">By: {art.Artist__c}</p>
+                            <p class="art-item">Purchase Price: ${art.Purchase_Price__c}</p>
+                            <p class="art-item">Estimated Value: ${art.Estimated_Value__c}</p>
+                            <p class="art-item">Date Acquired: {art.Date_Acquired__c}</p>
+                            <p class="art-item">Location: {art.Location__c}</p>
+
+                        </div>
                     </lightning-card>
                 </div>
             </template>
