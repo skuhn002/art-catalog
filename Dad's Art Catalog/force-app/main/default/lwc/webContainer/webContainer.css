@@ -1,14 +1,28 @@
 :host {
     display: block;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 10px;
     background-color: black;
     color: floralwhite
 }
 
+.card-container {
+    margin: 10px 0px;
+}
+
 .art-thumbnail {
     height: 20vh;
-    border: white 1px solid;;
+    border: white 1px solid;
+    margin: 0px 10px;
+}
+
+.art-flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.art-item {
+    text-align: center;
 }
