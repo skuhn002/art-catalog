@@ -3,7 +3,7 @@
     <fullName>Location__c</fullName>
     <description>Where the art is</description>
     <label>Location</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>TextArea</type>
 </CustomField>

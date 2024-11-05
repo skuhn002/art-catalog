@@ -3,7 +3,7 @@
     <fullName>Estimated_Value__c</fullName>
     <label>Estimated Value</label>
     <precision>12</precision>
-    <required>true</required>
+    <required>false</required>
     <scale>2</scale>
     <trackTrending>false</trackTrending>
     <type>Currency</type>

@@ -3,7 +3,7 @@
     <fullName>Backup_Image_File_Location__c</fullName>
     <description>Describes what storage device the file is backed up on</description>
     <label>Backup Image File Location</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>TextArea</type>
 </CustomField>

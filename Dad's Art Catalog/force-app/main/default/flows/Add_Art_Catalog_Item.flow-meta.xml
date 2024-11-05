@@ -82,7 +82,8 @@
     </assignments>
     <environments>Default</environments>
     <interviewLabel>Add Art Catalog Item {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Add Art Catalog Item v8</label>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>Add Art Catalog Item v10</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -132,7 +133,7 @@
             <fieldText>Date Acquired</fieldText>
             <fieldType>InputField</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
         </fields>
         <fields>
             <name>Copy_1_of_Purchase_Price</name>
@@ -140,7 +141,7 @@
             <fieldText>Purchase Price</fieldText>
             <fieldType>InputField</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
             <scale>0</scale>
         </fields>
         <fields>
@@ -149,7 +150,7 @@
             <fieldText>Estimated Value</fieldText>
             <fieldType>InputField</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
             <scale>0</scale>
         </fields>
         <showFooter>true</showFooter>
@@ -185,7 +186,7 @@
         </fields>
         <fields>
             <name>Copy_1_of_Copy_1_of_Instructions_3</name>
-            <fieldText>&lt;p&gt;&lt;strong&gt;Upload the Image to Imugr and enter the image link here:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Note - The &quot;i.&quot; will need to be added to the URL&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Example (https://i.imugr/VFSRofp)&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Upload the Image to Imugr and enter the image link here:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Note - The &quot;i.&quot; will need to be added to the beginning of the URL and &quot;.jpg&quot; to the end &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Example (&lt;span style=&quot;background-color: rgb(255, 251, 255); font-size: 12px; font-family: sans-serif; color: rgb(35, 25, 25);&quot;&gt;https://i.imgur.com/VFSRofp.jpg&lt;/span&gt;)&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -237,7 +238,7 @@
             <fieldText>Backup Image File Location</fieldText>
             <fieldType>LargeTextArea</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
         </fields>
         <fields>
             <name>Copy_1_of_Copy_1_of_Copy_1_of_Instructions_5</name>
@@ -250,7 +251,7 @@
             <fieldText>Backup Image File Path</fieldText>
             <fieldType>InputField</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -285,7 +286,7 @@
             <fieldText>Artist</fieldText>
             <fieldType>InputField</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
