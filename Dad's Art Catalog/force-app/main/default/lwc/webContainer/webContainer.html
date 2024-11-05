@@ -7,6 +7,7 @@
             </lightning-flow>
         </lightning-card>
     </div>
+    <c-selected-art selected-record={selectedRecord}></c-selected-art>
     <template if:true={artRecords}>
         <div class="card-container">
             <lightning-card class="card">
@@ -14,8 +15,8 @@
             </lightning-card>
         </div>
         <div class="art-flex-container">
-            <template for:each={artRecords} for:item="art">
-                <div key={art.Id} class="card-container">
+            <template for:each={artRecords} for:item="art" for:index="index">
+                <div key={art.Id} class="card-container" data-index={index} onclick={selectArt}>
                     <lightning-card class="card">
                         <div style="padding: 0px 10px;">
                             <p class="art-item-title">{art.Title__c}</p>

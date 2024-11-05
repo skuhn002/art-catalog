@@ -1,0 +1,23 @@
+.card-container {
+    margin: 10px 0px;
+    max-width: 95vw;
+}
+
+.art-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.art-item-title {
+    text-align: center;
+}
+
+.art-item {
+    text-align: left;
+}
+
+.selected-art {
+    max-width: 50%;
+    border: gray 5px solid;
+}
