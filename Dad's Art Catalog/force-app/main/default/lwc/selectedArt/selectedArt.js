@@ -1,4 +1,4 @@
-import { api, LightningElement } from 'lwc';
+import { api, LightningElement, track } from 'lwc';
 
 export default class SelectedArt extends LightningElement {
     @api
@@ -12,5 +12,12 @@ export default class SelectedArt extends LightningElement {
 
     handleSuccess(){
         this.editMode = false;
+
+        const updateEvent = new CustomEvent('updated', {
+            detail: { message: 'ART UPDATED' }
+        });
+
+        // Dispatch the event
+        this.dispatchEvent(updateEvent);
     }
 }

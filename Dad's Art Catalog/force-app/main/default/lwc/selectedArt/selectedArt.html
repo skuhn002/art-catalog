@@ -1,7 +1,7 @@
 <template>
     <template if:true={selectedRecord}>
         <div class="art-flex-container">
-            <div class="card-container">
+            <div class="card-container" style="width: 85%;">
                 <lightning-card class="card">
                     <p class="art-item-title">{selectedRecord.Title__c}</p>
                     <div style="text-align: center;">
@@ -32,11 +32,14 @@
                         <lightning-input-field field-name="Backup_Image_File_Location__c"></lightning-input-field>
                         <lightning-input-field field-name="Backup_Image_File_Path__c"></lightning-input-field>
                         <lightning-input-field field-name="CustomField__c"></lightning-input-field>
-                        <lightning-button class="slds-m-top_medium" type="submit" label="Save"></lightning-button>
+                        <div style="text-align: center;">
+                            <lightning-button style="margin-left: 10px;" type="submit" label="Save"></lightning-button>
+                            <lightning-button style="margin-left: 10px;" type="cancel" label="Cancel" onclick={toggleEditMode}></lightning-button>
+                        </div>
                     </lightning-record-edit-form>
                     </template>
                     <template if:false={editMode}>
-                        <button style="margin-left: 10px;" onclick={toggleEditMode}>Edit</button>
+                        <lightning-button style="margin-left: 10px;" label="Edit" onclick={toggleEditMode}></lightning-button>
                     </template>
                 </lightning-card>
             </div>

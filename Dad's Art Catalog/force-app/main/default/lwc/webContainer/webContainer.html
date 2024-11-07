@@ -7,7 +7,7 @@
             </lightning-flow>
         </lightning-card>
     </div>
-    <c-selected-art selected-record={selectedRecord}></c-selected-art>
+    <c-selected-art onupdated={handleArtUpdate} selected-record={selectedRecord}></c-selected-art>
     <template if:true={artRecords}>
         <div class="card-container">
             <lightning-card class="card">
