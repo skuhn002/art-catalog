@@ -43,6 +43,20 @@
                     </template>
                     <template if:false={editMode}>
                         <lightning-button style="margin-left: 10px;" label="Edit" onclick={toggleEditMode}></lightning-button>
+                        <template if:true={additionalCostRecords}>
+                            <hr style="background-color: black; height: 1px; margin: 10px 5px;">
+                            <h1 style="margin-left: 10px;">Additional Costs (${additionalCostSum}):</h1>
+                        </template>
+                        <template for:each={additionalCostRecords} for:item="cost">
+                            <div class="additional-cost-item" key={cost.id}>
+                                <lightning-card>
+                                    <div>
+                                        <p>Description: {cost.Description__c}</p>
+                                        <p>Amount: ${cost.Amount__c}</p>
+                                    </div>
+                                </lightning-card>
+                            </div>
+                        </template>
                     </template>
                     <template if:true={showFlow}>
                         <lightning-flow

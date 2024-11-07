@@ -1,9 +1,12 @@
-import { api, LightningElement, track } from 'lwc';
+import { api, LightningElement, track, wire } from 'lwc';
 import { FlowAttributeChangeEvent } from 'lightning/flowSupport';
+import getCosts from '@salesforce/apex/getAdditionalCosts.getCosts';
 
 export default class SelectedArt extends LightningElement {
     @track showFlow = false;
     @track _selectedRecord;
+    @track additionalCostRecords = [];
+    additionalCostSum;
     
     editMode = false;
 
@@ -15,9 +18,30 @@ export default class SelectedArt extends LightningElement {
         // Optionally, you can start the flow here if needed
         this.updateInputVariables();
         if (this._selectedRecord && this._selectedRecord.Id) {
+            //Flow Stuff - may or may not still need this - probably not, but don't mess with it right now
             console.log('About to fire notifyFlowOfChange');
             this.notifyFlowOfChange();
+
+            getCosts({artId: this._selectedRecord.Id}).then(result => {
+                this.additionalCostRecords = Array.isArray(result) ? result : [result];
+                console.log('additionalCostRecords: ');
+                console.log(this.additionalCostRecords);
+                this.additionalCostSum = this.calculateTotalAdditionalCosts();
+            });
         }
+    }
+
+    calculateTotalAdditionalCosts(){
+        var total = 0;
+        if (!this.additionalCostRecords) {
+            return 0;
+        }
+        
+        this.additionalCostRecords.forEach(record => {
+            total += record.Amount__c;
+        });
+
+        return total;
     }
 
     get selectedRecord() {

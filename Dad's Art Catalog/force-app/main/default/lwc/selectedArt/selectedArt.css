@@ -26,3 +26,9 @@
     width: 50vw;
     border: gray 5px solid;
 }
+
+.additional-cost-item {
+    margin: 10px;
+    padding: 3px;
+    border-radius: 5px;
+}
