@@ -2,9 +2,9 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <!--
-        -->
         <members>webContainer</members>
         <members>selectedArt</members>
+        -->
         <name>LightningComponentBundle</name>
     </types>
     <types>
@@ -35,6 +35,7 @@
     <types>
         <!--
         <members>Add_Art_Catalog_Item</members>
+        <members>Add_Additional_Cost</members>
         -->
         <name>Flow</name>
     </types>
