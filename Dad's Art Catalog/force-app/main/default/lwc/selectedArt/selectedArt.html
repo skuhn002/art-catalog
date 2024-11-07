@@ -16,7 +16,7 @@
                             <p class="art-item">Estimated Value: ${selectedRecord.Estimated_Value__c}</p>
                             <p class="art-item">Date Acquired: {selectedRecord.Date_Acquired__c}</p>
                             <p class="art-item">Location: {selectedRecord.Location__c}</p>
-                            <p class="art-item">Location: {selectedRecord.Notes__c}</p>
+                            <p class="art-item">Notes: {selectedRecord.Notes__c}</p>
                         </div>
                     </template>
                     <template if:true={editMode}>
@@ -43,6 +43,13 @@
                     </template>
                     <template if:false={editMode}>
                         <lightning-button style="margin-left: 10px;" label="Edit" onclick={toggleEditMode}></lightning-button>
+                    </template>
+                    <template if:true={showFlow}>
+                        <lightning-flow
+                        flow-api-name="Add_Additional_Cost"
+                        flow-input-variables={inputVariables}
+                        >
+                    </lightning-flow>
                     </template>
                 </lightning-card>
             </div>
