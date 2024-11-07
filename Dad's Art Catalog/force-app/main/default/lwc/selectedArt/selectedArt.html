@@ -5,7 +5,9 @@
                 <lightning-card class="card">
                     <p class="art-item-title">{selectedRecord.Title__c}</p>
                     <div style="text-align: center;">
-                        <img class="selected-art" src={selectedRecord.Imugr_Link__c} alt="Art Image">
+                        <a href={imgurLiveLink}>
+                            <img class="selected-art" src={selectedRecord.Imugr_Link__c} alt="Art Image">
+                        </a>
                     </div>
                     <template if:false={editMode}>
                         <div style="padding: 0px 10px;">
@@ -14,6 +16,7 @@
                             <p class="art-item">Estimated Value: ${selectedRecord.Estimated_Value__c}</p>
                             <p class="art-item">Date Acquired: {selectedRecord.Date_Acquired__c}</p>
                             <p class="art-item">Location: {selectedRecord.Location__c}</p>
+                            <p class="art-item">Location: {selectedRecord.Notes__c}</p>
                         </div>
                     </template>
                     <template if:true={editMode}>
@@ -31,7 +34,7 @@
                         <lightning-input-field field-name="Imugr_Link__c"></lightning-input-field>
                         <lightning-input-field field-name="Backup_Image_File_Location__c"></lightning-input-field>
                         <lightning-input-field field-name="Backup_Image_File_Path__c"></lightning-input-field>
-                        <lightning-input-field field-name="CustomField__c"></lightning-input-field>
+                        <lightning-input-field field-name="Notes__c"></lightning-input-field>
                         <div style="text-align: center;">
                             <lightning-button style="margin-left: 10px;" type="submit" label="Save"></lightning-button>
                             <lightning-button style="margin-left: 10px;" type="cancel" label="Cancel" onclick={toggleEditMode}></lightning-button>

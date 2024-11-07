@@ -20,4 +20,12 @@ export default class SelectedArt extends LightningElement {
         // Dispatch the event
         this.dispatchEvent(updateEvent);
     }
+
+    get imgurLiveLink(){
+        console.log('Inside getImgurLiveLink');
+        let theId = this.selectedRecord.Imugr_Link__c.split('_d')[0].split('/').at(-1);
+        let theLink = 'https://imgur.com/' + theId;
+
+        return theLink;
+    }
 }
